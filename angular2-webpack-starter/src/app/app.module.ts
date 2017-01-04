@@ -29,7 +29,8 @@ import { AboutComponent } from './about';
 import { NoContentComponent } from './no-content';
 import { XLargeDirective } from './home/x-large';
 // my components
-import { CategoryComponent } from './category/category.component';
+import { CategoryComponent } from './category/category-list.component';
+import { CategoryDetailComponent } from './category/category-detail.component'
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -54,7 +55,8 @@ type StoreType = {
     HomeComponent,
     NoContentComponent,
     XLargeDirective,
-    CategoryComponent
+    CategoryComponent,
+    CategoryDetailComponent
   ],
   imports: [ // import Angular's modules
     BrowserModule,
