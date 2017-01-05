@@ -6,7 +6,7 @@ from article.serizlizers import ArticleSerializer
 
 
 class CategorySerializer(serializers.ModelSerializer):
-    articles_filtered_by_user = serializers.SerializerMethodField('get_articles')
+    articles = serializers.SerializerMethodField()
 
     class Meta:
         model = Category

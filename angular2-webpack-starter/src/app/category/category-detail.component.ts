@@ -11,7 +11,6 @@ import { CategoryService } from './category.service';
 export class CategoryDetailComponent implements OnInit {
     category: any;
     errorMessage: string;
-    dich: string = 'DIch';
 
     constructor(private _route: ActivatedRoute,
                 private _router: Router,
@@ -22,9 +21,6 @@ export class CategoryDetailComponent implements OnInit {
             params => {
                 let id = +params['id'];
                 this.getCategory(id);
-                // let category = this.category;
-                console.log('===============');debugger
-                console.log(this.category);
             }
         );
     }   

@@ -18,10 +18,18 @@ export class CategoryService {
             .do(data => console.log(JSON.stringify(data)))
             .catch(this.handelError);
     }
+    // getCategory(id: number): Observable<any> {
+    //     return this.getCategoryes()
+    //         .map((categoryes: any[]) => categoryes.find(c => c.id===id))
+    // }
+
     getCategory(id: number): Observable<any> {
-        return this.getCategoryes()
-            .map((categoryes: any[]) => categoryes.find(c => c.id===id))
+        return this._http.get(this._baseurl + id)
+            .map((response: Response) => response.json())
+            .do(data => console.log(JSON.stringify(data)))
+            .catch(this.handelError);
     }
+
     private handelError(error: Response) {
         // in a real world app, we may send the server to some remote logging infrastructure
         // instead of just logging it to the console
