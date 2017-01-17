@@ -4,7 +4,11 @@ import { Component } from '@angular/core'
     templateUrl: './signup.component.html'
 })
 export class SignupComponent {
-  user = {};
+  user: User = {
+    'login' : '',
+    'password1' : '',
+    'password2' : ''
+  };
 
   constructor () {
   }
@@ -13,3 +17,9 @@ export class SignupComponent {
     console.log(this.user);
   }
 }
+
+ interface User {
+   login: string;
+   password1: string;
+   password2: string;
+ }
