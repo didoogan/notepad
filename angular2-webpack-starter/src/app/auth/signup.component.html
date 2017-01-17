@@ -1,26 +1,18 @@
  <h2 align="center">Signup: </h2>
- <form>
-    <div class="form-group row">
-      <div class="col-sm-4 col-sm-offset-4">  
-        <label for="usr">Login:</label>
-        <input type="text" class="form-control" id="usr" [(ngModel)]="login" />
-       <p> Preview:</p>
-      </div>  
+ <div class="row">
+  <form class="col-sm-4 col-sm-offset-4" (ngSubmit)="onSave()">
+    <div class="form-group">
+       <label for="usr">Login:</label>
+       <input type="text" class="form-control" name="login" id="usr" [(ngModel)]="user.login" />
     </div>
-    <div class="form-group row">
-        <div class="col-sm-4 col-sm-offset-4">
-            <label for="pwd">Password:</label>
-            <input type="password" class="form-control" id="pwd" [value]="password1">
-        </div>
+    <div class="form-group">
+       <label for="pwd">Password:</label>
+       <input type="password" class="form-control" name="password1" id="pwd" [(ngModel)]="user.password1" />
     </div>
-    <div class="form-group row">
-        <div class="col-sm-4 col-sm-offset-4">
-            <label for="pwd">Confirm password:</label>
-            <input type="password" class="form-control" id="pwd" [value]="password2">
-        </div>
+    <div class="form-group">
+       <label for="pwd1">Confirm password:</label>
+       <input type="password" class="form-control" name="password2" id="pwd1" [(ngModel)]="user.password2" />
     </div>
-    <div class="row">
-        <button (click)="onSave()" class="btn btn-success col-sm-4 col-sm-offset-4">Signup</button>
-    </div>    
-
+    <input type="submit" class="btn btn-success" value="Sign up">
   </form>
+</div>
