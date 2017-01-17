@@ -3,15 +3,15 @@
   <form class="col-sm-4 col-sm-offset-4" (ngSubmit)="onSave()">
     <div class="form-group">
        <label for="usr">Login:</label>
-       <input type="text" class="form-control" name="login" id="usr" [(ngModel)]="user.login" />
+       <input type="text" class="form-control" name="login" id="usr" [(ngModel)]="login" />
     </div>
     <div class="form-group">
        <label for="pwd">Password:</label>
-       <input type="password" class="form-control" name="password1" id="pwd" [(ngModel)]="user.password1" />
+       <input type="password" class="form-control" name="password1" id="pwd" [(ngModel)]="password1" />
     </div>
     <div class="form-group">
        <label for="pwd1">Confirm password:</label>
-       <input type="password" class="form-control" name="password2" id="pwd1" [(ngModel)]="user.password2" />
+       <input type="password" class="form-control" name="password2" id="pwd1" [(ngModel)]="password2" />
     </div>
     <input type="submit" class="btn btn-success" value="Sign up">
   </form>
