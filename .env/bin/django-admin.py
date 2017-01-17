@@ -1,4 +1,4 @@
-#!/home/user/projects/notepad/.env/bin/python2
+#!/home/doogan/coding/python/projects/notepad/.env/bin/python
 from django.core import management
 
 if __name__ == "__main__":

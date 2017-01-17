@@ -1,4 +1,4 @@
-#!/home/user/projects/notepad/.env/bin/python
+#!/home/doogan/coding/python/projects/notepad/.env/bin/python
 
 import sys
 import getopt

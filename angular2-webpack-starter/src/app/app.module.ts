@@ -31,6 +31,7 @@ import { XLargeDirective } from './home/x-large';
 // my components
 import { CategoryComponent } from './category/category-list.component';
 import { CategoryDetailComponent } from './category/category-detail.component'
+import { SignupComponent } from './auth/signup.component'
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -56,7 +57,8 @@ type StoreType = {
     NoContentComponent,
     XLargeDirective,
     CategoryComponent,
-    CategoryDetailComponent
+    CategoryDetailComponent,
+    SignupComponent
   ],
   imports: [ // import Angular's modules
     BrowserModule,

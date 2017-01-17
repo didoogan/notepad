@@ -17,12 +17,12 @@ export class CategoryDetailComponent implements OnInit {
                 private _categoryService: CategoryService) {}
 
     ngOnInit(): void {
-        this._route.params.subscribe(
-            params => {
-                let id = +params['id'];
-                this.getCategory(id);
-            }
-        );
+        // this._route.params.subscribe(
+        //     params => {
+        //         let id = +params['id'];
+        //         this.getCategory(id);
+        //     }
+        // );
     }   
 
     getCategory(id: number) {
