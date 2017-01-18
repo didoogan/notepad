@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { IUser } from './user';
+import { LoginService } from '../services/auth-services';
 
 @Component({
-    templateUrl: './signup.component.html'
+    templateUrl: './signup.component.html',
+    providers: [ LoginService ]
 })
 export class SignupComponent {
   login: string;
@@ -15,7 +17,7 @@ export class SignupComponent {
   };
 
 
-  constructor () {
+  constructor (private loginService: LoginService) {
   }
 
   onSave(): void {
@@ -23,6 +25,8 @@ export class SignupComponent {
       this.user.login = this.login;
       this.user.password = this.password1;
       console.log(this.user);
+      debugger;
+      this.loginService.makeLogin(this.user).subscribe(res => {debugger;});
     } else {
       console.log('fuck you');
     }
